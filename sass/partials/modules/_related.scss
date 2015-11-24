@@ -1,0 +1,50 @@
+.related {
+    @include outer-container;
+}
+
+.related h2 {
+    //@include shift(1);
+}
+
+.related-list {
+    li{
+        //border: 1px solid white;
+        @include span-columns(4);
+        @include omega();
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+.product-img-list {
+    li {
+        display: inline-block;
+        float: left;
+        text-align: center;
+    }
+}
+
+
+.image-product-related {
+    padding: 15px 0;
+    width: 160px;
+    height: 240px;
+}
+
+.name-game-related {
+    @include font-size(18);
+}
+
+.price-related {
+    color: #2dc103;
+    display: block;
+    text-align: center;
+}
+
+.product-price-related {
+    @include font-size(14);
+    color: white;
+    display: block;
+    margin-top: 0;
+    text-align: center;
+}

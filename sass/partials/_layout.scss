@@ -1,0 +1,65 @@
+//
+// General layout rules
+//
+
+.wrapper {
+    @include outer-container;
+/*     @include media($mobile) {
+        @include span-columns(2);
+    }
+    @include media($tablet) {
+        @include span-columns(6);
+    }
+    @include media($desktop) {
+        @include span-columns(12);
+    } */
+}
+
+section {
+    @include span-columns(12);
+    padding: 45px 0 65px;
+}
+
+.section-wide {
+    width: 100%;
+    height: auto;
+    background-color: $products-container;
+}
+
+.review-fav{
+    padding: 0;
+    li{
+        display: inline-block;
+        float: left;
+        font-size: 20px;
+    }
+}
+
+.reviews {
+    @include span-columns(10);
+    @include shift(1);
+}
+
+.review-user {
+    @include span-columns(2 of 12);
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.review-comment {
+    @include span-columns(10 of 12);
+    @include omega();
+    p{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+}
+
+.review-user, .review-comment{
+    h3{
+        margin-bottom: 5px;
+    }
+}

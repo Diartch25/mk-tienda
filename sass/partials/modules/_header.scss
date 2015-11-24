@@ -1,0 +1,17 @@
+.header-product {
+	@include outer-container;
+	@include media($mobile) {
+        @include span-columns(2);
+    }
+    @include media($tablet) {
+        @include span-columns(6);
+    }
+    @include media($desktop) {
+        @include span-columns(12);
+    }
+}
+
+
+.main-title {
+  	margin-bottom: 0;
+}
