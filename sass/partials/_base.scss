@@ -1,7 +1,12 @@
+/* ======================
+
+   Partials/base
+
+   ======================= */
+
 /*
  * Rules for base elements
  */
-
 html {
     font-size: 62.5%;
     font-family: $font;
@@ -9,10 +14,7 @@ html {
 
 body {
     margin: 0;
-    //background: url("../img/e-pattern.jpg");
     background: $wrap-color; /* fallback for old browsers */
-    //background: -webkit-linear-gradient(to left, #1e3c72 , #2a5298); /* Chrome 10-25, Safari 5.1-6 */
-    //background: linear-gradient(to left, #1e3c72 , #2a5298); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-image: -o-linear-gradient(right, #272939 0%, #232D7D 100%);
     background-image: -moz-linear-gradient(right, #272939 0%, #232D7D 100%);
     background-image: -webkit-linear-gradient(right, #272939 0%, #232D7D 100%);
@@ -20,10 +22,15 @@ body {
     background-image: linear-gradient(to right, #272939 0%, #232D7D 100%);
 }
 
+section {
+    @include span-columns(12);
+    padding: 45px 0 65px;
+}
+
 img {
-    width: inherit;
     max-width: 100%;
     height: auto;
+    width: inherit;
 }
 
 p, li {
@@ -42,8 +49,8 @@ ul, ol {
 }
 
 p {
-    overflow: hidden;
     color: $text-basic;
+    overflow: hidden;
 }
 
 a {
@@ -78,9 +85,9 @@ h1, h2, h3, h4, h5, h6 {
 
 // Tablas
 table {
-    width: 100%;
-    border-collapse: collapse;
     @include font-size(14);
+    border-collapse: collapse;
+    width: 100%;
 }
 
 th, td {
@@ -90,7 +97,6 @@ th, td {
 /*
  * Rules for base drupal elements
  */
-
 .element-invisible {
     @extend %hidden;
 }

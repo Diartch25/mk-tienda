@@ -1,6 +1,10 @@
-// Manatí Base Theme JS functions
-(function($) {
+(function($, window, document) {
+	$('#menu-toggle').on('click', function(){
+		$('#menu').toggleClass('show');
+	});
 
-// Add code here
+	$('#sub-menu').on('click', function(){
+		$('.menu-expanded').toggleClass('show-sub-menu');
+	});
 
-})(jQuery);
+}(window.jQuery, window, document));

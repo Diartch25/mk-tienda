@@ -1,17 +1,111 @@
+/* ======================
+
+   Partials/modules/product
+
+   ======================= */
+
+/* section product left
+   ========================================================================== */
 .product {
-    @include omega();
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(10);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
 }
 
-.product-img, .product-info {
-    @include span-columns(5 of 12);
+.product-img {
     @include omega();
-    margin: 18px 4%;
+    margin: 18px 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(4 of 10);
+        @include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(5 of 12);
+        margin-left: 0;
+    }
+}
+
+.product-img-list {
+    li {
+        display: inline-block;
+        float: left;
+        text-align: center;
+    }
+}
+
+/* section product right
+   ========================================================================== */
+.product-info {
+    @include omega();
+    margin: 18px 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+        @include omega();
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+        @include omega();
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(4 of 10);
+        margin-left: 0;
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(6 of 12);
+        @include shift(1);
+        @include omega();
+    }
 }
 
 .price {
     color: #2dc103;
-    font-weight: bolder;
     display: inline-block;
+    font-weight: bolder;
     margin-bottom: 0;
 }
 
@@ -21,26 +115,53 @@
     display: inline-block;
 }
 
+.product-description {
+    @include omega();
+    margin: 18px 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(4 of 10);
+        margin-left: 0;
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(6 of 12);
+        @include shift(1);
+    }
+}
+
+.review-block-latest {
+    background: #2D2D2D;
+    border: 1px solid #52C0D3;
+    border-radius: 3px;
+    margin-top: 20px;
+    overflow: hidden;
+    padding: 8px 4%;
+}
+
 .product-description-info {
     @include span-columns(5 of 5);
+    @include omega();
 }
 
 .product-comment {
     @include span-columns(5 of 5);
 }
 
-.product-description {
-    @include span-columns(5);
-    @include omega();
-    margin: 18px 4%;
-}
-
-.product-img-list {
-    .border-image{
-        border: 1px solid #52C0D3;
-        margin-right: 10px;
-        margin-top: 20px;
-    }
+.border-image{
+    border: 1px solid #52C0D3;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
 .active {

@@ -1,0 +1,29 @@
+/* ======================
+
+   Partials/modules/related
+
+   ======================= */
+
+/* section slider
+   ========================================================================== */
+.section-slider {
+	padding: 45px 0 65px;
+    width: 100%;
+}
+
+.slider-container {
+	max-width: $max-width;
+    background: #348F50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #348F50 , #56B4D3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #348F50 , #56B4D3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin: 0 auto;
+    @media ( min-width : 320px ) {
+    	height: 300px;
+    }
+    @media ( min-width : 600px ) {
+    	height: 320px;
+    }
+    @media ( min-width : 900px ) {
+		height: 450px;
+    }
+}

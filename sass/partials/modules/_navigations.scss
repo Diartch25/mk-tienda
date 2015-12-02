@@ -1,0 +1,152 @@
+/* ======================
+
+   Partials/modules/navigations
+
+   ======================= */
+
+
+/* icons
+   ========================================================================== */
+.menu-toggle {
+    @include font-size(18);
+    @include bground-lv($link, -40);
+    float: right;
+    text-align: center;
+    @media (min-width : 320px){
+        cursor: pointer;
+        display: block;
+        padding: 9px 0;
+        margin: 0 auto;
+        width: 70px;
+    }
+    @media (min-width : 900px) {
+        display: none;
+    }
+}
+
+.nav-main {
+    @include border-lv($subtitle, -60);
+    background: $menu-color;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 100%;
+    .menu {
+        transition: 0.4s;
+        overflow: hidden;
+        padding-left: 0;
+        width: 100%;
+        @media (min-width : 320px) {
+            height: 0;
+        }
+        @media (min-width : 900px) {
+            height: auto;
+        }
+    }
+
+    /*
+     * class added with js
+     */
+    .show {
+        @media (min-width : 320px){
+            height: 250px;
+        }
+        @media (min-width : 900px) {
+            height: auto;
+        }
+    }
+
+    .item-list {
+        height: 50px;
+        list-style: none;
+        padding: 10px 0;
+        text-align: center;
+        @media (min-width : 320px){
+            display: block;
+            width: 100%;
+        }
+        @media (min-width : 900px) {
+            display: inline-block;
+            width: 20%;
+        }
+        &:hover {
+            @include bground-lv($link, -40); 
+        }
+    }
+
+    .item-list:hover .link-nav {
+        color: $text-basic;
+        text-decoration: none;
+    }
+
+    .link-nav {
+        @include font-size(20);
+        color: $link;
+        text-align: center;
+    }
+
+    /*
+     * Sub navigation style
+     */
+    .expanded .menu-expanded {
+        background: $menu-color;
+        display: none;
+        height: 102px;
+        padding: 2px 0 19px 0;
+        @media (min-width : 320px){
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        @media (min-width : 900px) {
+            position: absolute;
+            overflow: hidden;
+            left: 180px;
+            top: 70px;
+            width: 50%;
+            z-index: 1;
+        }
+        li {
+            float: left;
+            padding: 13px 0;
+            width: 25%;
+            @media (min-width : 320px){
+                display: none;
+            }
+            @media (min-width : 900px) {
+                display: inline-block;
+            }
+        }
+        a {
+            @include font-size(15);
+            color: $text-basic;
+            text-decoration: none;
+        }
+    }
+    .expanded:hover .menu-expanded {
+        @media (min-width : 320px){
+            display: none;
+        }
+        @media (min-width : 900px) {
+            display: block;
+        }
+    }
+}
+
+/*
+ * class added with js
+ */
+.show-sub-menu {
+    overflow: hidden;
+    transition: 0.4s;
+    //padding-left: 0;
+    @media (min-width : 320px){
+        display: block !important;
+        height: 250px;
+    }
+    @media (min-width : 900px) {
+        height: auto;
+    }
+}
+

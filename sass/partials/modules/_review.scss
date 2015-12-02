@@ -1,15 +1,154 @@
+/* ======================
+
+   Partials/modules/review
+
+   ======================= */
+
+/* section reviews
+   ========================================================================== */
+.section-reviews {
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(10);
+        @include omega();
+        @include shift(1);
+    }
+    // 14 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+        //@include shift(1);
+    }
+}
+
 .review-block {
     border: 1px solid #52C0D3;
     border-radius: 3px;
     overflow: hidden;
     background: #2D2D2D;
-    padding: 8px 4%;
+    padding: 8px 40px;
     margin-top: 20px;
-    //box-shadow: -7px -7px 3px 0px #52C0D3;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+        padding: 8px 10px;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+        padding: 8px 15px;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
 }
 
-.product-comment {
+/*
+ * section user profile
+ */
+.review-user {
+    margin-top: 40px;
+    text-align: center;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(4 of 12);
+        @include omega();
+        @include shift(4);
+        display: block;
+        margin-top: 20px;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(2 of 12);
+        @include omega();
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
 
+.review-user p {
+    margin-top: 10px;
+}
+
+/*
+ * section user comment
+ */
+.review-comment {
+    @include span-columns(10 of 12);
+    @include omega();
+    margin-left: 20px;
+    padding: 10px;
+    p{
+        width: 100%;
+    }
+    ul{
+        width: 100%;
+    }
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(12 of 12);
+        @include omega();
+        display: block;
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10 of 12);
+        @include omega();
+        display: inline-block;
+    }
+}
+
+.review-comment-main {
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(12 of 12);
+        @include omega();
+        display: block;
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10 of 12);
+        @include omega();
+        display: inline-block;
+    }
+}
+
+.title-review {
+    margin-bottom: 0;
 }
 
 .profile-picture {
@@ -19,5 +158,45 @@
 
 .profile-picture-main {
     border-radius: 50%;
-    width: 40px;
+    // 8 columns 320px
+    @include media($mobile) {
+        width: 120px;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        width: 120px;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        width: 120px;
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        width: 70px;
+    }
+}
+
+.review-fav{
+    padding: 0;
+    margin: 5px 0;
+    li{
+        display: inline-block;
+        float: left;
+        font-size: 20px;
+    }
+}
+
+.video-review {
+    // 8 columns 320px
+    @include media($mobile) {
+        width: 100%;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        width: 560px;
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        width: 560px;
+    }
 }

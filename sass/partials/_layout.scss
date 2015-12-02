@@ -1,65 +1,155 @@
-//
-// General layout rules
-//
+/* ======================
+
+   Partials/layout
+
+   ======================= */
 
 .wrapper {
     @include outer-container;
-/*     @include media($mobile) {
-        @include span-columns(2);
-    }
-    @include media($tablet) {
-        @include span-columns(6);
-    }
-    @include media($desktop) {
-        @include span-columns(12);
-    } */
 }
 
-section {
-    @include span-columns(12);
-    padding: 45px 0 65px;
+.title-section {
+    @include omega();
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6);
+        @include shift(1);
+        margin-left: 0;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include shift(1);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
+    @include media($desktop-large) {
+        @include span-columns(12);
+        @include omega();
+        margin-left: 0;
+    }
 }
 
 .section-wide {
-    width: 100%;
+    background-color: $menu-color;
     height: auto;
-    background-color: $products-container;
+    width: 100%;
 }
 
-.review-fav{
-    padding: 0;
-    li{
-        display: inline-block;
-        float: left;
-        font-size: 20px;
+/* =============== Section Video =============== */
+.section-video {
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        @include omega();
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        @include omega();
+        //@include shift(1);
     }
 }
 
-.reviews {
-    @include span-columns(10);
-    @include shift(1);
-}
-
-.review-user {
-    @include span-columns(2 of 12);
-    display: inline-block;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.review-comment {
-    @include span-columns(10 of 12);
+.video-container {
     @include omega();
-    p{
+    margin: 18px 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(6 of 8);
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8 of 10);
+        @include shift(1);
+    }
+    // 12 columns 1280px
+    @include media($desktop) {
+        @include span-columns(10 of 12);
+        @include shift(1);
+    }
+    @include media($desktop-large) {
+        @include span-columns(12 of 12);
+        margin-left: 0;
+    }
+}
+
+/* ===================== products home ===================== */
+.section-products {
+    margin: 0;
+    width: 100%;
+}
+
+.list {
+    clear: both;
+    padding: 0;
+    margin: 0;
+    @media (min-width : 320px) {
         width: 100%;
     }
-    ul{
+    @media (min-width : 900px) {
+        margin: 0 auto;
+        width: 80%;
+    }
+    @media (min-width : 1280px) {
+        margin: 0 auto;
         width: 100%;
     }
 }
 
-.review-user, .review-comment{
-    h3{
-        margin-bottom: 5px;
+.col {
+    display: block;
+    float:left;
+}
+
+.product-item {
+    background-color: #252525;
+    text-align: center;
+    padding: 20px 0;
+    @media (min-width : 320px) {
+        margin: 20px 0;
+        width: 100%;
+    }
+    @media (min-width : 600px) {
+        margin: 20px 1%;
+        width: 48%;
+    }
+    @media (min-width : 900px) {
+        margin: 20px 1.5%;
+        width: 22%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

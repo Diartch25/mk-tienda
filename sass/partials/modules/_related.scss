@@ -1,34 +1,123 @@
-.related {
-    @include outer-container;
+/* ======================
+
+   Partials/modules/related
+
+   ======================= */
+
+/*
+ * section container without neat
+ */
+.section-wide {
+    margin: 0;
+    width: 100%;
 }
 
-.related h2 {
-    //@include shift(1);
+/* section products related
+   ========================================================================== */
+.related-products-container {
+    @include omega();
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(10);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
 }
 
 .related-list {
-    li{
-        //border: 1px solid white;
+    padding-left: 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(9);
+        @include shift(1);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(12);
+        margin-left: 0;
+    }
+}
+
+.related-list-item {
+    margin-top: 20px;
+    text-align: center;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include span-columns(8);
+        margin-left: 0;
+    }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(8);
+        margin-left: 0;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(3);
+        @include omega();
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
         @include span-columns(4);
         @include omega();
-        text-align: center;
-        margin-top: 20px;
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        @include span-columns(4);
+        @include omega();
     }
 }
-
-.product-img-list {
-    li {
-        display: inline-block;
-        float: left;
-        text-align: center;
-    }
-}
-
 
 .image-product-related {
-    padding: 15px 0;
-    width: 160px;
-    height: 240px;
+    // 8 columns 320px
+    @include media($mobile) {
+        padding: 15px 0;
+        width: 250px;
+        height: 350px;
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        padding: 15px 0;
+        height: 240px;
+        width: 160px;
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        padding: 15px 0;
+        height: 240px;
+        width: 160px;
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
+        padding: 15px 0;
+        height: 240px;
+        width: 160px;
+    }
 }
 
 .name-game-related {

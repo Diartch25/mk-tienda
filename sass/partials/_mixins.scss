@@ -1,6 +1,9 @@
-//
-// Mixins
-//
+/* ======================
+
+   Partials/mixins
+
+   ======================= */
+
 
 // font-size mixin
 @mixin font-size($size) {
@@ -16,4 +19,31 @@
   	background-image: url($image + ".svg"), none;
   	background-position: $x $y;
   	background-repeat: no-repeat;
+}
+
+// color text mixin
+// usage example:
+// @include color-lv(red, $nv:10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+@mixin color-lv($color, $nv) {
+    color: $color + $nv;
+}
+
+// color text mixin
+// usage example:
+// @include color-lv(red, $nv:10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+@include color-lv(red, $nv:10);
+@mixin bground-lv($color, $nv) {
+    background: $color + $nv;
+}
+
+// color text mixin
+// usage example:
+// border: x solid;
+// @include color-lv(red, $nv:10);
+// where $nv is a intensity with values: 0, negative or positive numbers
+// Important: border ever in top line
+@mixin border-lv($color, $nv) {
+    border-color: $color + $nv;
 }

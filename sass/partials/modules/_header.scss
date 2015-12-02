@@ -1,17 +1,58 @@
+/* ======================
+
+   Partials/modules/header
+
+   ======================= */
+
 .header-product {
 	@include outer-container;
-	@include media($mobile) {
-        @include span-columns(2);
-    }
-    @include media($tablet) {
+}
+
+.header-product-name {
+    // 8 columns 320px
+    @include media($mobile) {
         @include span-columns(6);
+        @include omega();
+        @include shift(1);
     }
+    // 8 columns 600px
+    @include media($mobile-large) {
+        @include span-columns(6);
+        @include omega();
+        @include shift(1);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include span-columns(8);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1200px
     @include media($desktop) {
+        @include span-columns(10);
+        @include omega();
+        @include shift(1);
+    }
+    // 12 columns 1400px
+    @include media($desktop-large) {
         @include span-columns(12);
+        @include omega();
+        margin-left: 0;
     }
 }
 
-
 .main-title {
   	margin-bottom: 0;
+    // 8 columns 320px
+    @include media($mobile) {
+        @include font-size(18);
+    }
+    // 10 columns 900px
+    @include media($tablet) {
+        @include font-size(22);
+    }
+    // 12 columns 1200px
+    @include media($desktop) {
+        @include font-size(25);
+    }
 }

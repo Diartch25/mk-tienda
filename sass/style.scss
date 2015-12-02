@@ -8,7 +8,8 @@
 @import "neat";
 
 // Google fonts
-// ...
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300,300italic);
+$font: 'Muli', Arial, sans-serif;
 
 // Parciales
 
@@ -17,12 +18,15 @@
 @import "partials/placeholders";
 @import "partials/base";
 @import "partials/layout";
+@import "partials/slider";
 @import "partials/components/forms/forms";
 @import "partials/components/forms/webforms";
 @import "partials/modules/header";
+@import "partials/modules/navigations";
 @import "partials/modules/review";
 @import "partials/modules/related";
 @import "partials/modules/product";
+@import "partials/modules/footer";
 
 
 // @import ...

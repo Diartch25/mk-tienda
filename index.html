@@ -5,144 +5,121 @@
     <meta name="viewport" content="width=device-with, initial-scale=1"/>
     <title>Productos - Nombre del Producto</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
   <body>
+    <div class="wrapper">
+      <nav class="nav-main">
+        <div class="menu-toggle" id="menu-toggle">Menu</div>
+        <ul id="menu" class="menu">
+          <li class="item-list"> <a class="link-nav" href="#">Inicio</a> </li>
+          <li id="sub-menu" class="item-list expanded">
+            <a class="link-nav" href="#">Juegos</a>
+            <ul id="menu-expanded" class="menu-expanded">
+              <li class="item-list"><a href="#">Acción</a></li>
+              <li class="item-list"><a href="#">Deportivos</a></li>
+              <li class="item-list"><a href="#">MOBA</a></li>
+              <li class="item-list"><a href="#">Rol</a></li>
+              <li class="item-list"><a href="#">Aventura</a></li>
+              <li class="item-list"><a href="#">Estrategia</a></li>
+              <li class="item-list"><a href="#">Carreras</a></li>
+              <li class="item-list"><a href="#">Simulación</a></li>
+            </ul>
+          </li> <!-- end expanded -->
+          <li class="item-list"> <a class="link-nav" href="#">¿Cómo comprar?</a> </li>
+          <li class="item-list"> <a class="link-nav" href="#">Contacto</a> </li>
+        </ul>
+      </nav>
+    </div> <!-- wrapper -->
+
+    <section class="section-slider">
+      <div class="slider-container">
+        
+      </div> <!-- slider-container -->
+    </section> <!-- section-slider -->
+
     <section class="section-wide">
-      <header class="header-product">
-        <h1 class="main-title"><a href="">Productos</a> / Nombre del Producto</h1>
-      </header>
-    </section> <!-- section-wide -->
-    <div class="wrapper">
-      <section class="product">
-          <div class="product-img">
-            <h2>Fallout 4</h2>
-            <ul class="product-img-list">
-              <li class="active"><img class="image-active" src="img/fallout.jpg"></li>
-              <li class="border-image"><img class="preview-image" src="img/fallout.jpg"></li>
-              <li class="border-image"><img class="preview-image" src="img/fallout.jpg"></li>
-              <li class="border-image"><img class="preview-image" src="img/fallout.jpg"></li>
-            </ul>
-          </div>
-          <div class="product-info">
-            <p>Fabricante</p>
-            <p class="price">Precio:  &nbsp &nbsp</p> <span class="product-price">US   $100</span>
-            <ul class="product-fav review-fav">
-              <li>☆</li>
-              <li>☆</li>
-              <li>☆</li>
-              <li>☆</li>
-              <li>☆</li>
-            </ul>
-          </div>
-          <div class="product-description">
-              <div class="product-description-info">
-                <h3>Descripción:</h3>
-                <p>Bethesda Game Studios, el galardonado creador de Fallout 3 y The Elder Scrolls V: <a href="#">Skyrim</a>, os da la bienvenida al mundo de <a href="#">Fallout 4</a>, su juego más ambicioso hasta la fecha y la siguiente generación de mundos abiertos.
-              </div>
+        <div class="wrapper">
+          <div class="related-products-container">
+              <h2 class="title-section title-product-related">Productos Relacionados</h2>
+              <ul class="related-list">
+                  <li class="related-list-item">
+                      <a href="product.html">
+                        <img class="image-product-related" src="img/callofduty.jpg">  
+                      </a>
+                      <p class="name-game-related">Call of Duty III</p>
+                      <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                  </li>
+                  <li class="related-list-item">
+                      <a href="#">
+                        <img class="image-product-related" src="img/csgo.jpg">
+                      </a>
+                      <p class="name-game-related">CS GO</p>
+                      <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                  </li>
+                  <li class="related-list-item">
+                      <a href="#">
+                        <img class="image-product-related" src="img/battlefront.jpg">
+                      </a>
+                      <p class="name-game-related">BATTLEFRONT</p>
+                      <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                  </li>
+              </ul>
+          </div> <!-- end related-products-container -->
+        </div> <!-- end wrapper -->
+    </section> <!-- end section-wide -->
 
-              <div class="product-comment">
-                <h3>Reviews:</h3>
-                <div class="review-block">
-                  <div class="review-user">
-                    <img class="profile-picture-main" src="http://lorempixel.com/50/50/people">
-                    <p>Pedrito</p>
-                  </div>
-                  <div class="review-comment">
-                    <h3>Comentario 1</h3>
-                    <p>Donec sagittis sed arcu in dictum. Morbi vel rutrum lorem, et tincidunt diam. Maecenas elit lacus, faucibus consectetur dui.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <section class="video">
-      <h2>Video Review</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/07n4hliWkNs" frameborder="0" allowfullscreen></iframe>
-      </section>
+    <div class="wrapper">
+        <section class="section-products">
+        <h2 class="title-section">Juegos y productos</h2>
+            <ul class="list group">
+                <li class="col product-item">
+                    <a href="#">
+                      <img class="image-product-related" src="img/fallout.jpg">
+                    </a>
+                    <p class="name-game-related">Fallout 4</p>
+                    <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                </li> <!-- end product-item -->
+                <li class="col product-item">
+                    <a href="#">
+                      <img class="image-product-related" src="img/csgo.jpg">
+                    </a>
+                    <p class="name-game-related">CS GO</p>
+                    <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                </li> <!-- end product-item -->
+                <li class="col product-item">
+                    <a href="#">
+                      <img class="image-product-related" src="img/battlefront.jpg">
+                    </a>
+                    <p class="name-game-related">BATTLEFRONT</p>
+                    <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                </li> <!-- end product-item -->
+                <li class="col product-item">
+                    <a href="#">
+                      <img class="image-product-related" src="img/callofduty.jpg">
+                    </a>
+                    <p class="name-game-related">Call of Duty III</p>
+                    <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
+                </li> <!-- end product-item -->
+            </ul>
     </div> <!-- end wrapper -->
-      <section  class="section-wide">
-          <div class="related">
-            <h2>Productos Relacionados</h2>
-            <ul class="related-list">
-              <li>
-                <img class="image-product-related" src="img/callofduty.jpg">
-                <p class="name-game-related">Call of Duty III</p>
-                <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
-              </li>
-              <li>
-                <img class="image-product-related" src="img/csgo.jpg">
-                <p class="name-game-related">CS GO</p>
-                <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
-              </li>
-              <li>
-                <img class="image-product-related" src="img/battlefront.jpg">
-                <p class="name-game-related">BATTLEFRONT</p>
-                <p class="price-related">Precio:</p> <p class="product-price-related">US $100</p>
-              </li>
-            </ul>
-          </div>
-      </section>
+
     <div class="wrapper">
-      <section class="reviews">
-        <h2>Reviews</h2>
-        <div class="review-block">
-          <div class="review-user">
-              <img class="profile-picture" src="http://lorempixel.com/50/50/people">
-              <p>Pedrito</p>
-          </div>
-          <div class="review-comment">
-            <h3>Comentario 1</h3>
-            <ul class="review-fav">
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-            </ul>
-            <p>Donec sagittis sed arcu in dictum. Morbi vel rutrum lorem, et tincidunt diam. Maecenas elit lacus, pharetra vel felis non, faucibus consectetur dui. Proin eget risus ac diam consequat semper. Duis et luctus nisi.</p>
-            <p>Mauris gravida ultricies ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sed pulvinar enim.</p>
-          </div>
-        </div>
-
-        <div class="review-block">
-          <div class="review-user">
-              <img class="profile-picture" src="http://lorempixel.com/50/50/people">
-              <p>Pablito</p>
-          </div>
-          <div class="review-comment">
-            <h3>Comentario 1</h3>
-            <ul class="review-fav">
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-            </ul>
-            <p>Donec sagittis sed arcu in dictum. Morbi vel rutrum lorem, et tincidunt diam. Maecenas elit lacus, pharetra vel felis non, faucibus consectetur dui. Proin eget risus ac diam consequat semper. Duis et luctus nisi.</p>
-            <p>Mauris gravida ultricies ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sed pulvinar enim.</p>
-          </div>
-        </div>
-
-        <div class="review-block">
-          <div class="review-user">
-              <img class="profile-picture" src="http://lorempixel.com/50/50/people">
-              <p>Juancito</p>
-          </div>
-          <div class="review-comment">
-            <h3>Comentario 1</h3>
-            <ul class="review-fav">
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-                <li>☆</li>
-            </ul>
-            <p>Donec sagittis sed arcu in dictum. Morbi vel rutrum lorem, et tincidunt diam. Maecenas elit lacus, pharetra vel felis non, faucibus consectetur dui. Proin eget risus ac diam consequat semper. Duis et luctus nisi.</p>
-            <p>Mauris gravida ultricies ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sed pulvinar enim.</p>
-          </div>
-        </div>
-      </section>
+      <footer class="footer">
+        <p class="text-footer">© 2015 :c</p>
+        <nav class="nav-footer">
+          <ul class="list-social">
+            <li class="li-item social-net-fb">
+              <a class="social-net" href="#"><p><i class="fa fa-facebook rrss-edit"></i></p></a>
+            </li>
+            <li class="li-item social-net-tw">
+              <a class="social-net" href="#"><p><i class="fa fa-twitter rrss-edit"></i></p></a>
+            </li>
+          </ul>
+        </nav> <!-- end nav -->
+      </footer>
     </div> <!-- end wrapper -->
   </body>
-  <script type="text/javascript" src="js/vendor/script.min.js"></script>
+  <script type="text/javascript" src="js/script.min.js"></script>
 </html>
